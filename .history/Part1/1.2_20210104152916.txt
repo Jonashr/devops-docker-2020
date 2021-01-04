@@ -1,7 +1,0 @@
-jonas@LAPTOP-QTAB58RU MINGW64 /c/ws
-$ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-
-jonas@LAPTOP-QTAB58RU MINGW64 /c/ws
-$ docker ps -a
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
