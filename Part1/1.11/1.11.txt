@@ -1,0 +1,17 @@
+Commands:
+
+Create a new logs file. Same directory as the Dockerfile.
+- touch logs.txt
+
+Build the image
+$ docker build -t backend-docker .
+
+Run the image:
+$ docker run -p 8000:8000 -v /$(pwd)/logs.txt:/usr/src/app/logs.txt backend-docker
+
+Stop and remove the image
+$ docker stop [containerid]
+$ docker rm [containerid]
+
+Restart the image and confirm that logs are still there and updates when checking the browser again:
+$ docker run -p 8000:8000 -v /$(pwd)/logs.txt:/usr/src/app/logs.txt backend-docker

@@ -1,0 +1,8 @@
+mkdir tmp
+cd tmp 
+touch logs.txt
+cd ..
+docker run -v $(pwd)/tmp/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+
+With windows:
+docker run -v /$(pwd)/tmp/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
