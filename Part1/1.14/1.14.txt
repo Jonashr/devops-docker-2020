@@ -1,0 +1,13 @@
+I first tried building from the image ruby:2.6.0-alpine to make the base image smaller.
+However, that caused problems with one of the nokogiri packages during the installation so this 
+had to be changed 2.6.0
+
+After changing that another problem occured. It failed during the db migration stage.
+A quick google search revealed that the cause was that nodejs was not installed causing problems.
+
+Therefore, I tried juts adding a RUN apt-get install nodejs. However that still did not work, and 
+google revealed the reason again. Therefore I added a script to install the nodesource node js 10x repo into the linux system, and then install.
+
+After that building the image worked, and I ran the image with the following command.
+
+docker run -p 3000:3000 ruby-project
