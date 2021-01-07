@@ -1,0 +1,1 @@
+cd into frontend-example-docker and build the image from the dockerfile.

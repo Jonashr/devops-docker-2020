@@ -1,0 +1,1 @@
+cd into spring-example-project and build the image from the dockerfile.
