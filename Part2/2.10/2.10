@@ -1,0 +1,9 @@
+Redefined the Dockerfiles to not use ENV variables for API_URL, FRONT_URL to make it easier to
+change them in the docker-compose.yml rather than rebuilding the image.
+
+Changed the API_URL to use http://localhost/api/
+
+Changed the FRONT_URL to use http://localhost/
+
+After that it works when accessing localhost. HOWEVER, it does not work if you access the ports. 
+say http://localhost:5000/
