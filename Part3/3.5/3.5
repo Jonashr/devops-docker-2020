@@ -1,0 +1,10 @@
+This has already been done in the previous exercise. Instead of building from Ubuntu, they are built from
+node:14-slim. They can be further optimized by for instance using node:14-alpine, or degraded to a lower 
+version of node. I decided to degrade from slim (which doesnt include curl for instance) to alpine, which changed the size in the following ways.
+
+Slim to alpine:
+frontend-alpine                                   latest               08d60b6278b9        32 seconds ago      328MB
+frontend-docker                                   latest               47b08a2d7eac        6 hours ago         380MB
+
+backend-alpine                                    latest               0d0e24d4258e        6 seconds ago       129MB
+backend-docker                                    latest               710b262de44d        7 hours ago         185MB
