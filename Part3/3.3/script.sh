@@ -3,9 +3,9 @@ echo "Input github link to clone:";
 
 read gitrepository;
 
-echo "input directory name for cloned repository"
+echo "input directory name for cloned repository";
 
-read directory
+read directory;
 
 git clone $gitrepository $directory
 
