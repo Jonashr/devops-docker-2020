@@ -4,4 +4,4 @@ RUN apk add --no-cache git
 
 COPY script.sh . 
 
-ENTRYPOINT ["./script.sh"]
+ENTRYPOINT ["sh", "script.sh"]

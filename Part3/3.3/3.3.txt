@@ -1,0 +1,4 @@
+Example usage:
+docker build -t myimagename .
+
+docker run-it -v /var/run/docker.sock:/var/rundocker.sock imagename

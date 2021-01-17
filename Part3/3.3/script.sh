@@ -1,28 +1,34 @@
 #!/bin/sh
-echo "Input github link:";
+echo "Input github link to clone:";
 
 read gitrepository;
 
-echo "input folder name to clone into"
+echo "input directory name for cloned repository"
 
-read $foldername
+read directory
 
-git clone $gitrepository $foldername
+git clone $gitrepository $directory
 
-cd $foldername
+cd "$directory";
+
+ls;
 
 echo "Current directory..." $PWD
 
-echo "input password.."
+echo "Input docker username"
+
+read dockerusername
+
+echo "Input docker password.."
 
 read -s password
 
-echo "$password" | docker login -u=jonashr --password-stdin
+echo "$password" | docker login -u=$dockerusername --password-stdin
 
 echo "Input image name"
 
 read imagename
 
-docker run build -t $imagename .
+docker build -t $dockerusername/$imagename .
 
-docker push -t jonashr/$imagename
+docker push $dockerusername/$imagename
